@@ -1,0 +1,269 @@
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+body{
+    background: var(--White);
+}
+
+/*Main*/
+.main{
+    background-image: url(./images/desktop/image-hero.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    padding: 50px 50px 0 50px;
+}
+
+/*HEADER*/
+
+.header{
+    background: transparent;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--White);
+}
+
+.nav-link:hover{
+    color: var(--Very-Dark-Gray);
+}
+
+.nav-logo {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 30px;
+    font-size: 40px;
+    color: var(--White);
+}
+
+
+/*HAMBURGER*/
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+.text-hero h1{
+    padding: 50px;
+    margin-top: 100px;
+    color: white;
+    float: left;
+    border: solid white;
+    font-size: 60px;
+    width: 600px;
+    text-transform: uppercase;
+    font-weight: 1;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.image-section{
+    padding: 40px 50px 50px 50px;
+    display: flex;
+}
+
+.text-section{
+    position: absolute;
+    width: 430px;
+    right: 290px;
+    top: 139%;
+    height: 300px;
+    padding: 50px;
+    border: solid white;
+    background: white;
+}
+
+.text-section h1{ 
+    font-size: 40px;
+    width: 350px;
+    text-transform: uppercase;
+    font-weight: 1;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.text-section p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--Dark-Gray);
+}
+
+.gallery{
+    padding: 50px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title button{
+    padding: 10px 10px 10px 10px;
+    margin-right: 50px;
+}
+
+.gallery h1{
+    font-size: 40px;
+}
+
+.wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrapper-1{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrapper span{
+    color: white;
+    font-size: 30px;
+    margin-top: 350px;
+    margin-left: -212px;
+    padding: 10px 15px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.wrapper-1 span{
+    color: white;
+    font-size: 30px;
+    margin-top: 350px;
+    margin-left: -212px;
+    padding: 10px 15px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+/*FOoter*/
+
+footer{
+    padding: 50px;
+    background-color: var(--Black);
+}
+.footer-links{
+    display:flex;
+    padding: 0;   
+}
+.footer-links li a{
+    color: var(--White);  
+    padding-right: 15px;
+}
+footer .link{
+    text-align: right;
+    margin-bottom: 20px;
+}
+footer .link a{
+    padding-right:15px;
+}
+footer .copy{
+    text-align: right;
+    color: var(--White);
+}
